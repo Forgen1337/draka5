@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp1.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:local="clr-namespace:WpfApp1" 
+        mc:Ignorable="d" 
+        Title="MainWindow" Height="480" Width="800" Background="White">
+    <Grid x:Name="maingrid">
+        <Menu Background="White" Margin="0,0,0,411" BorderBrush="Navy" BorderThickness="1">
+            <MenuItem Header="Цвет">
+                <RadioButton GroupName="color" Content="Белый" Click="RadioButton_Click"/>
+                <RadioButton GroupName="color" Content="Красный" Click="RadioButton_Click_1"/>
+                <RadioButton GroupName="color" Content="Синий" Click="RadioButton_Click_2"/>
+                <RadioButton GroupName="color" Content="Зеленый" Click="RadioButton_Click_3"/>
+                <RadioButton GroupName="color" Content="Черный" Click="RadioButton_Click_4"/>
+            </MenuItem>
+            <MenuItem Header="Инфо" Click="MenuItem_Click"/>
+            <MenuItem Header="Закрыть" Click="MenuItem_Click_1"/>
+        </Menu>
+
+        <ToolBar HorizontalAlignment="Left" Height="31" Margin="0,23,0,0" VerticalAlignment="Top" Width="790">
+            <ComboBox Name="combobox" Width="30" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem Name="red">
+                    <Image Source="https://img.fotokonkurs.ru/cache/comment_image_big/comments/2019/5/5/7a12e2c135708eca86c3d43e96051436.jpeg" Width="16" Height="16"/>
+                </ComboBoxItem>
+            </ComboBox>
+        </ToolBar>
+
+        <StatusBar Background="White" Width="444" Margin="10,392,338,10">
+            <TextBlock x:Name="t1" Text=""/>
+            <StatusBarItem VerticalAlignment="Bottom" RenderOptions.BitmapScalingMode="HighQuality">
+                <TextBlock x:Name="t2" Text=""/>
+            </StatusBarItem>
+        </StatusBar>
+
+
+    </Grid>
+</Window>
